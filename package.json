@@ -1,0 +1,28 @@
+{
+  "name": "forex-service",
+  "version": "1.0.0",
+  "description": "freemium",
+  "main": "dist/index.js",
+  "author": "Faboule",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && eslint --ext .ts --fix src && tsc -p .",
+    "start": "ts-node src",
+    "dev": "ts-node-dev src"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
+}
