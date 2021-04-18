@@ -46,10 +46,10 @@ class Server {
     );
     console.log('path to static app:', pathToStaticApp);
     this.app
-      .use(express.static(pathToStaticApp))
-      // .get('/', async (req, res) => {
-      //   res.sendFile(`${pathToStaticApp}/index.html`);
-      // });
+      .use(express.static(pathToStaticApp));
+    // .get('/', async (req, res) => {
+    //   res.sendFile(`${pathToStaticApp}/index.html`);
+    // });
   }
 
   start() {
