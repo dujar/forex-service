@@ -7,11 +7,21 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && eslint --ext .ts --fix src && tsc -p .",
-    "start": "ts-node src",
-    "dev": "ts-node-dev src"
+    "start": "node dist/src",
+    "dev": "ts-node-dev src",
+    "test": "ava --verbose --serial",
+    "pretest": "rm -rf tests  && tsc -p tsconfig.test.json"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@ava/typescript": "^1.1.1",
+    "ava": "^3.15.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
@@ -24,5 +34,10 @@
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.4"
+  },
+  "ava": {
+    "files": [
+      "tests/test/*"
+    ]
   }
 }

@@ -38,6 +38,11 @@ module.exports = {
     'global-require': 'off',
     'no-param-reassign': 'off',
     'no-shadow': 'off',
-    'prefer-destructuring': 'off'
+    'prefer-destructuring': 'off',
+    'no-new': 'off',
+    'no-tabs': 'off',
+    'no-useless-constructor': 'off',
+    'no-empty-function': 'off'
+
   },
 };
