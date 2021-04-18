@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && eslint --ext .ts --fix src && tsc -p .",
-    "start": "ts-node src",
+    "start": "node dist/src",
     "dev": "ts-node-dev src",
     "test": "ava --verbose --serial",
     "pretest": "rm -rf tests  && tsc -p tsconfig.test.json"

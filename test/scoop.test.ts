@@ -12,7 +12,7 @@ const BASE_URI = "https://api.currencyscoop.com/v1";
 const scoop = axios.create({
     baseURL: BASE_URI,
     params: {
-        api_key: process.env.CURRENCY_SCOOP
+        api_key: process.env.SCOOP_API_KEY
     }
 });
 

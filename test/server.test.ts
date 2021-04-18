@@ -43,7 +43,7 @@ test("get all currencies to match scoop currencies", async (t)=>{
     const scoopCurrencies =  await axios.get('https://api.currencyscoop.com/v1/currencies', {
                 params: {
                     type: 'fiat',
-                    api_key: process.env.CURRENCY_SCOOP
+                    api_key: process.env.SCOOP_API_KEY
                 }
             });
     const currencies = scoopCurrencies.data.response.fiats;
