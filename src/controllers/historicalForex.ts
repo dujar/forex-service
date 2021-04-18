@@ -14,7 +14,7 @@ export const historicalForex = async (req: Request, res: Response) => {
     return;
   }
   const { currenciesSymbol, services } = req.app.locals;
-  if (!currenciesSymbol.find((e) => e == base)) {
+  if (!currenciesSymbol.find((e) => e === base)) {
     res.sendStatus(400);
     return;
   }

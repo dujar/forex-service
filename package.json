@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && eslint --ext .ts --fix src && tsc -p .",
-    "start": "ts-node src",
+    "start": "node dist/src",
     "dev": "ts-node-dev src",
     "test": "ava --verbose --serial",
     "pretest": "rm -rf tests  && tsc -p tsconfig.test.json"
@@ -17,6 +17,7 @@
     "ava": "^3.15.0",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "lodash": "^4.17.21",

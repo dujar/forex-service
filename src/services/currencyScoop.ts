@@ -17,7 +17,7 @@ export class CurrencyScoop {
     });
   }
 
-  getTodaysRate = async (base: string, symbols: string[]) => await this.client.get('/latest', {
+  getTodaysRate = async (base: string, symbols: string[]) => this.client.get('/latest', {
     params: {
       base,
       symbols: symbols.join(','),
@@ -48,7 +48,7 @@ export class CurrencyScoop {
       const resp = await Promise.all([...new Array(Number(span))].map(async (e, i) => {
         let date = moment().subtract(i, 'day').format('YYYY-MM-DD');
         let resp;
-        if (i == 0) {
+        if (i === 0) {
           date = moment().format('YYYY-MM-DD');
           resp = await this.getTodaysRate(base, symbols);
           if (resp) {
@@ -65,7 +65,7 @@ export class CurrencyScoop {
         return resp;
       }));
 
-      if (resp && resp.filter((e) => e).length == span) {
+      if (resp && resp.filter((e) => e).length === Number(span)) {
         const parsedData = resp.reduce((a, b) => {
           a[b.date] = b.rates;
           return a;
@@ -84,7 +84,7 @@ export class CurrencyScoop {
     }
   }
 
-  getHistoricalRates = async (base: string, symbols: string[], date) => await this.client.get('/historical', {
+  getHistoricalRates = async (base: string, symbols: string[], date) => this.client.get('/historical', {
     params: {
       base,
       symbols: symbols.join(','),

@@ -4,7 +4,7 @@ export const realTimeForex = async (req: Request, res: Response) => {
   console.log('realTimeForex');
   const { services, currenciesSymbol } = req.app.locals;
   const { base } = req.query;
-  if (!currenciesSymbol.find((e) => base)) {
+  if (!currenciesSymbol.find((e) => e === base)) {
     res.sendStatus(400);
     return;
   }
