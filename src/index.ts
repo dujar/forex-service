@@ -1,6 +1,4 @@
 import express, { Express, Router } from 'express';
-
-import bodyParser from 'body-parser';
 import { historicalForex, currencyList, realTimeForex } from './controllers';
 import { getServices } from './services';
 import currenciesInfo from '../fiatCurrencies.json';
